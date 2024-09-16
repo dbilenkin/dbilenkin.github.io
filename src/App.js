@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import ProjectCard from './ProjectCard';
 import ProjectPage from './ProjectPage';
@@ -92,7 +92,7 @@ function App() {
   const sortedConcerts = [...concerts].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
-    <Router>
+    <HashRouter>
       <GlobalStyle
         backgroundColor={backgroundColor}
         textColor={textColor}
@@ -173,7 +173,7 @@ function App() {
           </Routes>
         </MainContent>
       </Container>
-    </Router>
+    </HashRouter>
   );
 }
 
